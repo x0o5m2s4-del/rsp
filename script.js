@@ -92,21 +92,12 @@ async function playGame() {
 
 
 
-  let computer = "";
-
-
-
-  // 무승부 안 나오게 반복
-  do {
-
-    computer =
-      choices[
-        Math.floor(
-          Math.random() * 3
-        )
-      ];
-
-  } while (computer === selectedChoice);
+  const computer =
+    choices[
+      Math.floor(
+        Math.random() * 3
+      )
+    ];
 
 
 
@@ -128,6 +119,19 @@ async function playGame() {
   } else {
 
     display.textContent = "✋";
+
+  }
+
+
+
+  // 무승부
+  if (selectedChoice === computer) {
+
+    document.getElementById("result-text")
+      .textContent =
+        "무승부! 다시 한 번 해봐 🤝";
+
+    return;
 
   }
 
