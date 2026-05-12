@@ -92,12 +92,21 @@ async function playGame() {
 
 
 
-  const computer =
-    choices[
-      Math.floor(
-        Math.random() * 3
-      )
-    ];
+  let computer = "";
+
+
+
+  // 무승부 안 나오게 반복
+  do {
+
+    computer =
+      choices[
+        Math.floor(
+          Math.random() * 3
+        )
+      ];
+
+  } while (computer === selectedChoice);
 
 
 
@@ -129,20 +138,7 @@ async function playGame() {
 
 
 
-  // 무승부면 다시
-  if (selectedChoice === computer) {
-
-    document.getElementById("result-text")
-      .textContent =
-        "무승부! 다시 도전해줘 🤝";
-
-    return;
-
-  }
-
-
-
-  // 승리
+  // 승리 조건
   if (
 
     (selectedChoice === "가위" && computer === "보") ||
@@ -178,6 +174,7 @@ async function playGame() {
 
 
 
+  // Firebase 저장
   await db.collection("rpsGame").add({
 
     name: name,
