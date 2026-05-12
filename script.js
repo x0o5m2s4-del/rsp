@@ -193,4 +193,11 @@ async function playGame() {
 
   });
 
+
+
+  // 게임 끝나면 버튼 숨기기
+  document.querySelector(
+    "#game-screen button"
+  ).style.display = "none";
+
 }
