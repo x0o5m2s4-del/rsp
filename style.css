@@ -5,7 +5,7 @@ body {
 
   font-family: sans-serif;
 
-  background: #fff7f0;
+  background: #f2f8ff;
 
   display: flex;
   justify-content: center;
@@ -23,7 +23,7 @@ body {
 
 h1 {
 
-  color: #ff9b5e;
+  color: #5aa9ff;
 
 }
 
@@ -40,7 +40,7 @@ select {
 
   border-radius: 12px;
 
-  border: 2px solid #ffd0b3;
+  border: 2px solid #bfe3ff;
 
   font-size: 16px;
 
@@ -56,7 +56,7 @@ button {
 
   border-radius: 12px;
 
-  background: #ffb380;
+  background: #7fc4ff;
 
   color: white;
 
@@ -88,7 +88,7 @@ button {
 
   font-size: 28px;
 
-  color: #ff8c42;
+  color: #4d8fe0;
 
   font-weight: bold;
 
