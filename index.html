@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>가위바위보 게임</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>가위바위보 게임</h1>
+
+    <!-- 시작 화면 -->
+    <div id="start-screen">
+
+      <input
+        type="text"
+        id="name"
+        placeholder="이름 입력"
+      />
+
+      <input
+        type="text"
+        id="studentId"
+        placeholder="학번 입력"
+      />
+
+      <select id="choice">
+
+        <option value="">
+          선택하기
+        </option>
+
+        <option value="가위">
+          가위 ✌️
+        </option>
+
+        <option value="바위">
+          바위 ✊
+        </option>
+
+        <option value="보">
+          보 ✋
+        </option>
+
+      </select>
+
+      <button onclick="startGame()">
+        시작하기
+      </button>
+
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="game-screen">
+
+      <div id="computer-choice">
+        ❔
+      </div>
+
+      <button onclick="playGame()">
+        가위바위보 하기
+      </button>
+
+      <h2 id="result-text"></h2>
+
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
