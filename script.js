@@ -129,11 +129,21 @@ async function playGame() {
 
 
 
+  // 무승부면 다시
   if (selectedChoice === computer) {
 
-    result = "무승부! 0점 🤝";
+    document.getElementById("result-text")
+      .textContent =
+        "무승부! 다시 도전해줘 🤝";
 
-  } else if (
+    return;
+
+  }
+
+
+
+  // 승리
+  if (
 
     (selectedChoice === "가위" && computer === "보") ||
 
@@ -143,9 +153,9 @@ async function playGame() {
 
   ) {
 
-    result = "승리! 1점 🎉";
+    result = "승리! 2점 🎉";
 
-    score = 1;
+    score = 2;
 
   } else {
 
